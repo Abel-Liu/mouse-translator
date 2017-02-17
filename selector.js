@@ -110,6 +110,9 @@ function createDiv(word, x, y, screenX, screenY) {
     var screen_width = screen.availWidth;
     var screen_height = screen.availHeight;
 
+    if(screenX > screen.availWidth)
+        screenX -= screen.availWidth;
+    
     if (screenX + frame_width < screen_width)
         frame_left = x;
     else
